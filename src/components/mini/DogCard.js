@@ -2,15 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const DogCard = props => (
-    <div className='col d-flex flex-column  align-items-center'>
+    < div className='col-3 d-flex flex-column  align-items-center' >
         <Link to="/Zoe">
             <img
-                src="https://images.dog.ceo/breeds/briard/n02105251_8911.jpg"
+                src={props.img}
                 className="img-thumbnail"
+                alt='Zoe'
             ></img>
         </Link>
         <h3>Zoe</h3>
-    </div>
+    </div >
 )
 
 export default DogCard;

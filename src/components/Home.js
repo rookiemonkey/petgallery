@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import renderDogs from '../helpers/renderDogs';
 import Nav from './mini/Nav';
-import DogCard from './mini/DogCard';
 
 class Home extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class Home extends Component {
         <div className="container">
           <div className='row'>
 
-            <DogCard />
+            {renderDogs(this.state.dogs)}
 
           </div>
         </div>
