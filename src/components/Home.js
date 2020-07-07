@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import renderDogs from '../helpers/renderDogs';
+import getDogs from '../helpers/getDogs';
+import getNames from '../helpers/getNames';
 import Nav from './mini/Nav';
 
 class Home extends Component {
@@ -12,20 +14,10 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    fetch('https://dog.ceo/api/breeds/image/random/10')
-      .then(r => { return r.json() })
-      .then(d => {
-        this.setState({ ...this.state, dogs: d.message }, () => {
-          fetch('https://randomuser.me/api/?results=10')
-            .then(r => { return r.json() })
-            .then(d => {
-              const names = d.results.map(o => { return o.name.first })
-              this.setState({ ...this.state, names: names }, () => { console.log(this.state) })
-            })
-            .catch(e => { console.error('Something went upon fetching the names:', e.message) })
-        })
-      })
-      .catch(e => { console.error('Something went upon fetching the dogs:', e.message) })
+    Promise.all([getDogs(12), getNames(12)])
+      .then(d => { this.setState({ dogs: d[0], names: d[1] }) })
+      .catch(e => { console.error(`Something went wrong upon fetching data ${e.message}`) })
+
   }
 
   render() {
