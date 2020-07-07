@@ -10,7 +10,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/:dog' component={Dog} />
+        <Route exact path='/:dog/:id' component={Dog} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

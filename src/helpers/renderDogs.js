@@ -5,6 +5,7 @@ import DogCard from '../components/mini/DogCard';
 const renderDogs = ({ dogs, names }) => {
     return dogs.map((d, i) => (
         <DogCard
+            ind={i}
             name={names[i]}
             key={shortid.generate()}
             img={d}
