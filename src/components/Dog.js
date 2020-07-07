@@ -7,6 +7,7 @@ class Dog extends Component {
             <div>
                 <Nav />
                 <h1>Dog Route</h1>
+                <img src={sessionStorage.ChosenDog} alt="Zoe"></img>
             </div>
         )
     }

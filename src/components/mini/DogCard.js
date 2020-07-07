@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import setImage from '../../helpers/setImage';
 
 const DogCard = props => (
     < div className='col-3 d-flex flex-column  align-items-center' >
-        <Link to="/Zoe">
+        <Link
+            to={`/${props.name}`}
+            onClick={() => { setImage(props.img) }}
+        >
             <img
                 src={props.img}
                 className="img-thumbnail"

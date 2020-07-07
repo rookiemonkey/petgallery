@@ -17,7 +17,6 @@ class Home extends Component {
     Promise.all([getDogs(12), getNames(12)])
       .then(d => { this.setState({ dogs: d[0], names: d[1] }) })
       .catch(e => { console.error(`Something went wrong upon fetching data ${e.message}`) })
-
   }
 
   render() {
