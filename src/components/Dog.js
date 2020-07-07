@@ -11,8 +11,16 @@ class Dog extends Component {
         return (
             <div>
                 <Nav />
-                <img src={Dogs[ind]} alt={dog} />
-                <h3>{dog}</h3>
+
+                <div className="container">
+                    <div className='row'>
+                        <div className='mx-auto'>
+                            <img src={Dogs[ind]} alt={dog} />
+                            <h3>{dog}</h3>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         )
     }
