@@ -6,8 +6,15 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dogs: []
+      dogs: new Array(10)
     }
+  }
+
+  componentDidMount() {
+    fetch('https://dog.ceo/api/breeds/image/random/10')
+      .then(r => { return r.json() })
+      .then(d => { this.setState({ dogs: d.message }) })
+      .catch(e => { console.error('Something went upon fetching the dogs:', e.message) })
   }
 
   render() {
