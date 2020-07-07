@@ -7,10 +7,10 @@ const DogCard = props => (
             <img
                 src={props.img}
                 className="img-thumbnail"
-                alt='Zoe'
+                alt={props.name}
             ></img>
         </Link>
-        <h3>Zoe</h3>
+        <h3>{props.name}</h3>
     </div >
 )
 

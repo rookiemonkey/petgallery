@@ -29,13 +29,16 @@ class Home extends Component {
   }
 
   render() {
+
+    const { dogs, names } = this.state
+
     return (
       <div className="App">
         <Nav />
         <div className="container">
           <div className='row'>
 
-            {renderDogs(this.state.dogs)}
+            {renderDogs({ dogs, names })}
 
           </div>
         </div>
