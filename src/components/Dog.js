@@ -15,7 +15,11 @@ class Dog extends Component {
                 <div className="container">
                     <div className='row'>
                         <div className='mx-auto'>
-                            <img src={Dogs[ind]} alt={dog} />
+                            <img
+                                src={Dogs[ind]}
+                                alt={dog}
+                                className='img-raw'
+                            />
                             <h3>{dog}</h3>
                         </div>
                     </div>
