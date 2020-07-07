@@ -1,0 +1,12 @@
+.img-thumbnail {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: filter 500ms ease-in-out;
+
+    &:hover {
+        filter: none;
+    }
+}
