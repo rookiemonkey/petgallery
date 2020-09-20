@@ -11,6 +11,8 @@ class Home extends Component {
       dogs: new Array(10),
       names: []
     }
+
+    this.loadMore = this.loadMore.bind(this);
   }
 
   componentDidMount() {
@@ -32,6 +34,20 @@ class Home extends Component {
     }
   }
 
+  loadMore() {
+    console.log('loadmore')
+    Promise.all([getDogs(6), getNames(6)])
+      .then(data => {
+        this.setState({
+          dogs: [...this.state.dogs, ...data[0]],
+          names: [...this.state.names, ...data[1]]
+        })
+      })
+      .catch(error => {
+        console.error(`Something went wrong upon fetching data ${error.message}`)
+      })
+  }
+
   render() {
 
     const { dogs, names } = this.state
@@ -47,7 +63,11 @@ class Home extends Component {
           </div>
 
           <div className="row d-flex justify-content-center">
-            <button type="button" class="btn btn-dark btn-custom">
+            <button
+              onClick={this.loadMore}
+              type="button"
+              class="btn btn-dark btn-custom"
+            >
               Load More
               <svg
                 xmlns="http://www.w3.org/2000/svg"
