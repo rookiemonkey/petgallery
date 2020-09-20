@@ -45,6 +45,21 @@ class Home extends Component {
             {renderDogs({ dogs, names })}
 
           </div>
+
+          <div className="row d-flex justify-content-center">
+            <button type="button" class="btn btn-dark btn-custom">
+              Load More
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="white"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 21l-12-18h24z" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     );
