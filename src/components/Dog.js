@@ -25,8 +25,22 @@ class Dog extends Component {
                         </div>
                     </div>
                     <div>
-                        <Link to="/">
-                            Back to Lists
+                        <Link to="/" className="btn-custom-back-link">
+                            <button
+                                type="button"
+                                className="btn btn-dark btn-custom-back"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    fill="white"
+                                    viewBox="0 0 24 24">
+                                    <path d="M3 12l18-12v24z" />
+                                </svg>
+                                &nbsp;
+                                Back
+                            </button>
                         </Link>
                     </div>
                 </div>
