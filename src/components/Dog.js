@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Nav from './mini/Nav';
 
 class Dog extends Component {
@@ -22,6 +23,11 @@ class Dog extends Component {
                             />
                             <h3>{dog}</h3>
                         </div>
+                    </div>
+                    <div>
+                        <Link to="/">
+                            Back to Lists
+                        </Link>
                     </div>
                 </div>
 

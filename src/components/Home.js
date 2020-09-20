@@ -35,7 +35,6 @@ class Home extends Component {
   }
 
   loadMore() {
-    console.log('loadmore')
     Promise.all([getDogs(6), getNames(6)])
       .then(data => {
         this.setState({
@@ -66,7 +65,7 @@ class Home extends Component {
             <button
               onClick={this.loadMore}
               type="button"
-              class="btn btn-dark btn-custom"
+              className="btn btn-dark btn-custom"
             >
               Load More
               <svg
