@@ -54,11 +54,16 @@ a {
 }
 
 .img-raw {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 250px;
     object-fit: contain;
 }
 
 h3 {
     text-align: center;
+}
+
+.dog-card {
+    padding: 25px;
+    border: 1px solid rgba(0,0,0,0.25);
 }
